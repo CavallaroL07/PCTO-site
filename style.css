@@ -1,18 +1,17 @@
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-  --bg: #f0f9f9;
+  --bg: #f6f6f6;
   --paper: #ffffff;
   --card: #ffffff;
-  --border: #ead2cc;
-  --accent: #b80c00;
-  --accent-strong: #8b0101;
-  --accent-soft: #fff0ec;
-  --gold: #b64d11;
-  --text: #333333;
-  --muted: #6e5b57;
-  --shadow: 0 10px 24px rgba(139, 1, 1, .08);
-  --serif: 'Cormorant Garamond', Georgia, serif;
+  --border: #dcdddf;
+  --accent: #141414;
+  --accent-strong: #0b0b0b;
+  --accent-soft: #f4f5f6;
+  --gold: #9f9f9f;
+  --text: #141414;
+  --muted: #5b5b5b;
+  --shadow: none;
   --sans: 'Roboto', Arial, sans-serif;
 }
 
@@ -38,18 +37,16 @@ nav {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 0 3rem;
-  background: rgba(255, 255, 255, .95);
-  backdrop-filter: blur(18px);
+  padding: 0 2rem;
+  background: rgba(255, 255, 255, .98);
   border-bottom: 1px solid var(--border);
-  box-shadow: 0 4px 16px rgba(139, 1, 1, .06);
 }
 
 .nav-logo {
   font-family: var(--sans);
-  font-size: 1.22rem;
+  font-size: 1rem;
   font-weight: 700;
-  color: var(--accent);
+  color: var(--accent-strong);
   letter-spacing: .02em;
   white-space: nowrap;
 }
@@ -58,10 +55,10 @@ nav {
 
 .pill {
   min-height: 42px;
-  padding: .52rem 1.1rem;
+  padding: .55rem .95rem;
   border-radius: 999px;
   border: 1px solid var(--border);
-  background: #fff;
+  background: transparent;
   color: var(--accent-strong);
   font-family: var(--sans);
   font-size: .78rem;
@@ -74,8 +71,8 @@ nav {
 
 .pill.active,
 .pill:hover {
-  background: var(--accent);
-  border-color: var(--accent);
+  background: var(--accent-strong);
+  border-color: var(--accent-strong);
   color: #fff;
 }
 
@@ -97,8 +94,7 @@ nav {
   padding: .75rem;
   background: var(--paper);
   border: 1px solid var(--border);
-  border-radius: 8px;
-  box-shadow: 0 4px 16px rgba(139, 1, 1, .06);
+  border-radius: 12px;
 }
 
 .section-nav span {
@@ -144,11 +140,11 @@ nav {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #ffffff 0%, #fff0ec 100%);
+  background: #fafafb;
 }
 
 #p2 .hero-bg {
-  background: linear-gradient(135deg, #ffffff 0%, #fff4ea 100%);
+  background: #fcfcfd;
 }
 
 .hero-grid {
@@ -168,15 +164,15 @@ nav {
 .hero-eyebrow {
   width: fit-content;
   font-size: .78rem;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: .14em;
   text-transform: uppercase;
-  color: var(--accent-strong);
-  background: var(--accent-soft);
-  border: 1px solid rgba(184, 12, 0, .16);
-  border-radius: 6px;
-  padding: .48rem .78rem;
-  margin-bottom: 1.05rem;
+  color: var(--muted);
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: .38rem .72rem;
+  margin-bottom: 1rem;
 }
 
 .hero h1 {
@@ -212,11 +208,10 @@ nav {
   display: flex;
   flex-wrap: wrap;
   border: 1px solid var(--border);
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
   margin: 2rem 3rem 0;
   background: var(--paper);
-  box-shadow: var(--shadow);
 }
 
 .info-cell {
@@ -263,15 +258,15 @@ nav {
 .sc {
   background: var(--card);
   border: 1px solid var(--border);
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
   margin-bottom: 1.25rem;
-  box-shadow: 0 6px 18px rgba(31, 48, 74, .05);
-  transition: border-color .18s ease;
+  transition: border-color .18s ease, transform .18s ease;
 }
 
 .sc:hover {
-  border-color: rgba(184, 12, 0, .32);
+  border-color: var(--accent-strong);
+  transform: translateY(-1px);
 }
 
 .sc-head {
@@ -348,15 +343,12 @@ nav {
 
 /* DAY */
 .day-card {
-  border-left: 6px solid var(--gold);
-  background: #fff7ef;
-  border-radius: 8px;
-  border-top: 1px solid #f2dba8;
-  border-right: 1px solid #f2dba8;
-  border-bottom: 1px solid #f2dba8;
+  border-left: 4px solid var(--accent-strong);
+  background: var(--paper);
+  border-radius: 12px;
+  border: 1px solid var(--border);
   padding: 1.3rem 1.55rem;
   margin-bottom: 1.25rem;
-  box-shadow: 0 6px 18px rgba(142, 97, 12, .06);
 }
 
 .day-tag {
@@ -384,18 +376,16 @@ nav {
 .compare-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1px;
-  background: var(--border);
+  gap: 1rem;
   overflow: hidden;
 }
 
 .compare-col {
-  background: #fff;
+  background: var(--paper);
   padding: 1.35rem 1.45rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
 }
-
-.compare-col:first-child { background: #fff8f6; }
-.compare-col:nth-child(2) { background: #fff7ef; }
 
 .compare-col h4 {
   font-size: .78rem;
@@ -443,13 +433,12 @@ nav {
 /* CONCLUSION */
 .conclusion-card {
   background: var(--accent-strong);
-  border: 1px solid rgba(139, 1, 1, .18);
-  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, .12);
+  border-radius: 12px;
   padding: 2rem 1.8rem;
   position: relative;
   overflow: hidden;
   margin-bottom: 1.25rem;
-  box-shadow: 0 8px 24px rgba(139, 1, 1, .12);
 }
 
 .conclusion-card::before {
